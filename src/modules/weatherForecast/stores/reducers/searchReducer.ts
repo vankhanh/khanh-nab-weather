@@ -4,7 +4,7 @@ import { combineReducers } from "redux";
 import { ActionTypeKeys } from "../actions/actionTypes";
 import { AutoSuggestionsActions, AutoSuggesstionState } from "../../../../interfaces/autoSuggestions";
 
-function locationReducer(state: string = "", action: ILocationAction): string {
+export function locationReducer(state: string = "", action: ILocationAction): string {
     switch (action.type) {
         case ActionTypeKeys.UPDATED_LOCATION:
             return action.payload.location;
@@ -13,13 +13,13 @@ function locationReducer(state: string = "", action: ILocationAction): string {
     }
 }
 
-const initAutoSuggestState: AutoSuggesstionState = {
+export const initAutoSuggestState: AutoSuggesstionState = {
     isLoading: false,
     locationItems: [],
     error: new Error(""),
 };
 
-function autoSuggestionsReducer(
+export function autoSuggestionsReducer(
     state: AutoSuggesstionState = initAutoSuggestState,
     action: AutoSuggestionsActions,
 ): AutoSuggesstionState {
