@@ -1,7 +1,7 @@
 import { appStateMock } from "../../../../../fixtures/appStateMock";
 import searchSelector from "../searchSelector";
 
-describe("searachSelector", () => {
+describe("searchSelector", () => {
     it("should return search info", () => {
         const result = searchSelector(appStateMock);
         expect(result).toEqual({
