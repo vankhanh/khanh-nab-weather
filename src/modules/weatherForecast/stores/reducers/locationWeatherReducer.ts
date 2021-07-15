@@ -1,13 +1,13 @@
 import { LocationWeatherActions, LocationWeathersState } from "../../../../interfaces/locationWeathers";
 import { ActionTypeKeys } from "../actions/actionTypes";
 
-const initLocationWeatherState: LocationWeathersState = {
+export const initLocationWeatherState: LocationWeathersState = {
     isLoading: false,
     weatherItems: [],
     error: null,
 };
 
-export default function LocationWeathersReducer(
+export default function locationWeathersReducer(
     state: LocationWeathersState = initLocationWeatherState,
     action: LocationWeatherActions,
 ): LocationWeathersState {

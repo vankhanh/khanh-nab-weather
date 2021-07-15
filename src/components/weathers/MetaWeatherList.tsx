@@ -12,18 +12,22 @@ export default function MetaWeatherList(): JSX.Element {
     const { weatherItems, isLoading, error } = useSelector(locationWeathersSelector);
 
     if (isLoading) {
-        return <StyledMessage>Loading...</StyledMessage>;
+        return <StyledMessage className="is-loading">Loading...</StyledMessage>;
     }
 
     if (error?.message) {
-        return <Alert severity="error">{error.message}</Alert>;
+        return (
+            <Alert severity="error" className="error-message">
+                {error.message}
+            </Alert>
+        );
     }
 
     return (
         <>
             {weatherItems.map(
                 (locationWeathers: ILocationWeathers): JSX.Element => (
-                    <StyledWeatherItem key={locationWeathers.locationId}>
+                    <StyledWeatherItem key={locationWeathers.locationId} className="meta-weather-list">
                         <MetaWeather locationWeathers={locationWeathers} />
                     </StyledWeatherItem>
                 ),

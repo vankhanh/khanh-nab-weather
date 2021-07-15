@@ -4,6 +4,7 @@ import Select, { ActionMeta, components } from "react-select";
 import Alert from "@material-ui/lab/Alert";
 import CloseIcon from "@material-ui/icons/Close";
 import debounce from "lodash/debounce";
+import { IconButton } from "@material-ui/core";
 
 import { ILocation } from "../interfaces/location";
 import { updateLocationAction } from "../modules/weatherForecast/stores/actions/location";
@@ -16,7 +17,6 @@ import searchSelector from "../modules/weatherForecast/stores/selectors/searchSe
 import { StyledDivSearch, StyledSearchIcon, StyledSection } from "../styles/searchStyled";
 import { ILocationWeathers } from "../interfaces/locationWeathers";
 import locationWeathersSelector from "../modules/weatherForecast/stores/selectors/locationWeathersSelector";
-import { IconButton } from "@material-ui/core";
 
 type OptionMenuItem = {
     value: number;
@@ -109,7 +109,7 @@ const Search = (): JSX.Element => {
 
             {isDisplayError && (
                 <Alert
-                    className="alert-item"
+                    className="alert-item warning-message"
                     severity="error"
                     action={
                         <IconButton
@@ -128,7 +128,7 @@ const Search = (): JSX.Element => {
 
             {!!selectedValue && (
                 <Alert
-                    className="alert-item"
+                    className="alert-item error-message"
                     severity="error"
                     action={
                         <IconButton

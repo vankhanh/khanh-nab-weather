@@ -11,8 +11,8 @@ export default function WeatherItem(props: WeatherItemProps) {
     return (
         <StyledDivRowWrap>
             <h3>{formatDate(applicableDate)}</h3>
-            <p>Min: {`${Math.floor(minTemp)}°C`}</p>
-            <p>Max: {`${Math.floor(maxTemp)}°C`}</p>
+            <p className="min-temperature">Min: {`${Math.floor(minTemp)}°C`}</p>
+            <p className="max-temperature">Max: {`${Math.floor(maxTemp)}°C`}</p>
         </StyledDivRowWrap>
     );
 }
