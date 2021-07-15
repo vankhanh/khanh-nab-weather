@@ -109,7 +109,7 @@ const Search = (): JSX.Element => {
 
             {isDisplayError && (
                 <Alert
-                    className="alert-item warning-message"
+                    className="alert-item error-message"
                     severity="error"
                     action={
                         <IconButton
@@ -128,8 +128,8 @@ const Search = (): JSX.Element => {
 
             {!!selectedValue && (
                 <Alert
-                    className="alert-item error-message"
-                    severity="error"
+                    className="alert-item warning-message"
+                    severity="warning"
                     action={
                         <IconButton
                             aria-label="close"
