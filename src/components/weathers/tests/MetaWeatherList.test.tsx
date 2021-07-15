@@ -10,7 +10,6 @@ import {
     appStateMockWithLocationWeathersErrorState,
 } from "../../../fixtures/appStateMock";
 import MetaWeather from "../MetaWeather";
-import Alert from "@material-ui/lab/Alert";
 
 describe("MetaWeatherList", () => {
     it("should render MetaWeatherList component", () => {
